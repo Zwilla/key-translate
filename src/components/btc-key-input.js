@@ -2,7 +2,7 @@ import bitcoinjs from 'bitcoinjs-lib';
 import ethereumjsWallet from 'ethereumjs-wallet';
 import bs58 from 'bs58';
 
-var Worker = require('worker-loader!./../utils/key-derivator-worker.js')
+var Worker = require('worker-loader!./../utils/key-derivator-worker.js');
 const worker = new Worker();
 
 export default {
@@ -52,7 +52,7 @@ export default {
     `,
     methods: {
         translateKey: function (secret, address) {
-            
+
             worker.onmessage = (e) => {
                 if (e.data.status) {
                     this.status = e.data.status;
@@ -88,12 +88,12 @@ export default {
                         console.warn(err);
                     }
 
-                    return;
+
                 }
             };
 
             worker.postMessage({
-                msg: { secret: secret, address: address }
+                msg: {secret: secret, address: address}
             });
 
         }
@@ -108,7 +108,7 @@ export default {
             error: null,
             status: {
                 try: 0,
-                max: 100
+                max: 10000
             }
         }
     }
