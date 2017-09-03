@@ -1,4 +1,4 @@
-# Aeternity Key Translate GUI
+# Bitcoin to Ethereum Address Translate GUI
 
 Generate a ETH public/private key pair (derived ETH address) from your Bitcoin sender address and WIF or mnemonic phrase.
 
