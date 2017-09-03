@@ -1,11 +1,11 @@
-var path = require('path');
-var webpack = require('webpack');
-var LoaderOptionsPlugin = require("webpack/lib/LoaderOptionsPlugin");
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-var autoprefixer = require('autoprefixer');
-var FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const LoaderOptionsPlugin = require("webpack/lib/LoaderOptionsPlugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var ENV = process.env.npm_lifecycle_event;
 var isProd = ENV === 'build';
@@ -20,7 +20,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: isProd ? '' : 'http://localhost:8080/',
+    publicPath: isProd ? '' : 'http://localhost:8081/',
     filename: isProd ? 'js/[name].[hash].js' : 'js/[name].js',
     chunkFilename: isProd ? '[id].[hash].chunk.js' : '[id].chunk.js'
   },
@@ -47,14 +47,14 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({ fallbackLoader: "style-loader", loader: "css-loader!postcss-loader!sass-loader" }),
         include: [resolve('src/style')]
-      },            
-      { 
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-        loader: "url-loader?limit=10000&minetype=application/font-woff" 
       },
-      { 
-        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-        loader: "file-loader" 
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url-loader?limit=10000&minetype=application/font-woff"
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file-loader"
       },
       {
         test: /\.html$/,
@@ -78,10 +78,10 @@ module.exports = {
     hints: false
   },
   devtool: '#eval-source-map'
-}
+};
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
+  module.exports.devtool = '#source-map';
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({

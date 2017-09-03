@@ -1,3 +1,10 @@
 <component name="ProjectDictionaryState">
-  <dictionary name="Zwilla" />
+  <dictionary name="Zwilla">
+    <words>
+      <w>autoprefixer</w>
+      <w>bitcoinjs</w>
+      <w>ethereumjs</w>
+      <w>hdkey</w>
+    </words>
+  </dictionary>
 </component>

@@ -12,8 +12,36 @@
       <meta http-equiv="expires" content="Wed, 15 Apr 1970 8:47:00 GMT">
       <meta http-equiv="pragma" content="no-cache">
 
+      <script type="text/javascript">
+
+          var elem = document.getElementById('addTestData');
+          if(elem){
+              elem.getElementById("addTestData").addEventListener('click', function () {
+                  addTestData()
+              });
+          }
+
+          function addTestData() {
+              var derivationTries = document.getElementById('derivationTries');
+              derivationTries.value = '100';
+
+              var bipCustomPathPrefix = document.getElementById('bipCustomPathPrefix');
+              bipCustomPathPrefix.value = 'm/44\'/0\'/0\'/0/';
+
+              var secret = document.getElementById('secret');
+              secret.value = 'gold yard dizzy report sting cereal smart enter wild cargo balance season display process sick';
+
+              var address = document.getElementById('address');
+              address.value = '1D2i1bNfVQaVeasCRyRHEdiZYnVgwLUzBH';
+
+          }
+
+      </script>
   </head>
+
   <body>
     <div id="app"></div>
+
+
   </body>
 </html>

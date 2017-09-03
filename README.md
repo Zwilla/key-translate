@@ -53,6 +53,6 @@ Aeternity please donate for my work to: ETH0xD78ec516C31A0fcd22D3CC6DC454FB87d68
 
 ## changes and more
 * added some more code for better user experience!
-* security audit = software look safe at moment (03.September 2017)
+* security audit = software looks safe at moment (03.September 2017)
 * **Use this tool only absolute offline!**
 * **Remember after building this app you also have to trust 200 and more sub packages !!!!**
