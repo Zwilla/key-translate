@@ -3,7 +3,8 @@
 Generate a ETH public/private key pair (derived ETH address) from your Bitcoin sender address and WIF or mnemonic phrase.
 
 ## Live version
-Hosted on Github Pages: https://aeternity.github.io/key-translate/
+Hosted on Github Pages: [https://aeternity.github.io/key-translate/](https://www.google.de/search?q=%2Bmytokenwallet+%2Byoutube)
+
 **DO NOT USE THIS TOOL LIVE! NEVER!**
 
 **It is strongly recommended to use this tool at an cold place,
