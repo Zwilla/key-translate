@@ -4,6 +4,10 @@ Generate a ETH public/private key pair (derived ETH address) from your Bitcoin s
 
 ## Live version
 Hosted on Github Pages: https://aeternity.github.io/key-translate/
+**DO NOT USE THIS TOOL LIVE! NEVER!**
+
+**It is strongly recommended to use this tool at an cold place,
+like a Ras-Pi without any network connection. It is too dangerous for loosing all your coins!**
 
 ## Setup
 
